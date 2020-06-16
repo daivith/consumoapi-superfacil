@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Sistema de Serviços do SuperFácil, endpoint de serviços</title>
+</head>
+<body>
+    <div class="container">
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Serviço</th>
+                    <th>Descrição</th>    
+                </tr>
+            </thead>
+            <tbody>
+                <% services.forEach((service) => { %>
+                <tr>
+                    <td><%= service.titulo %></td>
+                    <td><%- service.descricao %></td>
+                </tr>
+               <% }) %> 
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
